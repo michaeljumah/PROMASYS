@@ -3,31 +3,26 @@
 
 
 {%block title %} Home {% endblock %}
-<style>
-    div.btn btn-success {
-        left: -100px;
-    }
-</style>
+
+
+
 
 {% block body %}
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col md-12">
             <div class="jumbotron p-3">
-                <h2> Manage <b> Projects </b> <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#mymodal"> Add New Project </button>  </h2>
-
+                <h2>Manage <b>Projects </b>  <button type="button"  class="btn btn-success float-right" data-toggle="modal" data-target="#myModal">Add New Project</button>  </h2>
 
                 <table class="table table-hover table-dark">
 
                     <tr>
-
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Done by</th>
-                        <th>Action</th>
-
+                        <th>NAME</th>
+                        <th>DESCRIPTION</th>
+                        <th>DONE BY</th>
+                        <th>ACTION</th>
                     </tr>
 
                     <tr>
@@ -36,15 +31,61 @@
                         <td></td>
                         <td></td>
                         <td>
-                            <a href="" class="btn btn-warning btn-xs" data-toggle="model" data-target="#mymodel">Edit</a>
-                            <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to DELETE ?')">DELETE</a>
+                            <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#mymodaledit">Edit</a>
+                            <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to dalete ?')">Delete</a>
                         </td>
                     </tr>
-                </table>
 
+                </table>
             </div>
+
+
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+           
+                        <div class="modal-header">
+                            <h5 class="modal-title text-primary" style="align-content: center;">Please Add New Project</h5>    
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          
+        
+                        <div class="modal-body">
+                            
+                            <form action="" method="POST">
+                                <div class="form-group">
+                                  <label>Name</label>
+                                  <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Name of the Project">
+                                </div>
+        
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input type="text" name="description" class="form-control" id="exampleFormControlInput1" placeholder="Description of the Project">
+                                </div>
+        
+                                <div class="form-group">
+                                    <label>Done by</label>
+                                    <input name="done" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Done by">
+                                  </div>
+        
+                                  <button type="submit" class="btn btn-primary mb-2">Add Project</button>
+                             
+                              </form>
+        
+        
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        
+        
+            <!-- End of Enter New Student Modal -->
+            
         </div>
-    </div>       
+    </div>
 </div>
 
 {% endblock %}

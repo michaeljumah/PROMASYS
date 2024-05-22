@@ -3,15 +3,19 @@
 
 
 {%block title %} Home {% endblock %}
-
+<style>
+    div.btn btn-success {
+        left: -100px;
+    }
+</style>
 
 {% block body %}
 
 <div class="container">
     <div class="row">
         <div class="col md-12">
-            <div class="jumbotron jumbotron-fluid">
-                <h2>Manage <b>Projects</b> <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#mymodal"> Add New Project </button> </h2>
+            <div class="jumbotron p-3">
+                <h2> Manage <b> Projects </b> <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#mymodal"> Add New Project </button>  </h2>
 
 
                 <table class="table table-hover table-dark">

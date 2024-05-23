@@ -103,9 +103,9 @@ Once the application is running, open a web browser and go to http://127.0.0.1:5
 
 ![index page Screenshot](images/screenshot.jpg)
 
-![index page Screenshot](images/s1.jpg)
+![update a project Screenshot](images/s1.jpg)
 
-![index page Screenshot](images/s.jpg)
+![udd a project Screenshot](images/s.jpg)
 
 
 Interface for managing tasks within a project.

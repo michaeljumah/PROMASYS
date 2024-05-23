@@ -61,8 +61,8 @@ def update():
         my_data = Data.query.get(request.form.get('id'))
         
         my_data.name = request.form['name']
-        my_data.name = request.form['description']
-        my_data.name = request.form['handler']
+        my_data.description = request.form['description']
+        my_data.handler = request.form['handler']
         
         
         db.session.commit()

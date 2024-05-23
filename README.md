@@ -1,4 +1,5 @@
-**PROMASYS
+##PROMASYS - PROJECT MANAGEMENT SYSTEM
+
 Project Management Flask Web Application
 Table of Contents
 Introduction
@@ -13,15 +14,15 @@ Contributing
 License
 Contact
 
-Introduction
+#Introduction
 The Project Management System is a Flask Web Application designed to help teams manage projects efficiently. It provides tools for task assignment, task creation,update and Delete.
 
-Features
+##Features
 
 Project Creation: Create and manage multiple projects.
 Task Management: Assign tasks to team members
 
-Installation
+##Installation
 Follow these steps to set up the project locally.
 
 Prerequisites
@@ -30,27 +31,27 @@ pip
 Virtualenv (recommended)
 
 Steps
-Clone the repository
+##Clone the repository
 
 bash
 Copy code
 git clone https://github.com/michaeljumah/PROMASYS.git
 cd ROMASYS
 
-Create and activate a virtual environment
+##Create and activate a virtual environment
 
 bash
 Copy code
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-Install dependencies
+##Install dependencies
 
 bash
 Copy code
 pip install -r requirements.txt
 
-Set up the database
+###Set up the database
 
 bash
 Copy code
@@ -58,12 +59,14 @@ flask db init
 flask db migrate -m "Initial migration."
 flask db upgrade
 
-Run the application
+##Run the application
 
 bash
 Copy code
 flask run
-Configuration
+
+
+##Configuration
 Configuration settings are stored in config.py. Adjust the settings as needed, especially the database URI, secret key, and any other environment-specific variables.
 
 python
@@ -74,10 +77,10 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'your_secret_key'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///site.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-Usage
+##Usage
 Once the application is running, open a web browser and go to http://127.0.0.1:5000/ to access the application. Register a new user or log in with an existing account to start managing projects.
 
-Screenshots
+##Screenshots
 
 ![index page Screenshot](images/screenshot.jpg)
 
@@ -87,9 +90,7 @@ Interface for managing tasks within a project.
 Project Structure
 The project structure follows the standard Flask application format.
 
-arduino
-Copy code
-project-management-flask/
+PROMASYS/
 │
 ├── app/
 │   ├── __init__.py
@@ -109,7 +110,9 @@ project-management-flask/
 ├── requirements.txt
 ├── run.py
 └── README.md
-Dependencies
+
+
+##Dependencies
 The main dependencies for this project are listed in requirements.txt.
 
 makefile
@@ -117,7 +120,9 @@ Copy code
 Flask==2.0.2
 Flask-SQLAlchemy==2.5.1
 
-Testing
+##Testing
+
+
 To run the tests, use the following command:
 
 bash
@@ -125,13 +130,16 @@ Copy code
 pytest
 Ensure that the testing framework pytest is installed in your virtual environment.
 
-Contributing
+##Contributing
+
 Contributions are welcome! Please fork the repository and submit a pull request with your changes. Ensure that your code adheres to the project's coding standards and includes appropriate tests.
 
-License
+##License
+
 See the LICENSE file for more information.
 
-Contact
+##Contact
+
 For any questions or inquiries, please contact https://github.com/michaeljumah.
 twitter: https://twitter.com/MichaelDenver8
 github: https://github.com/michaeljumah.
@@ -141,7 +149,7 @@ github: https://github.com/michaeljumah.
 
 
 
-**Creating a new brunch to work on separetly
+##Creating a new brunch to work on separetly
 cd path/to/your/repository
 git fetch origin
 git checkout -b new-feature
@@ -151,7 +159,7 @@ This process will create a new branch in your local repository, switch to it, an
 
 
 
-
+##ISSUES TO TACKLE IN THE FUTURE
 User Authentication: Secure login and registration system.
 set deadlines, and track progress.
 Collaboration Tools: Comment on tasks, share files, and receive notifications.

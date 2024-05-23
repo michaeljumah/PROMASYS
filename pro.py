@@ -62,13 +62,25 @@ def update():
         
         my_data.name = request.form['name']
         my_data.description = request.form['description']
-        my_data.handler = request.form['handler']
+        my_data.handler = request.form['handler'] 
         
         
         db.session.commit()
         flash("Project Updated Successfully")
         
         return redirect(url_for('index'))
+    
+    
+@app.route('/delete/<id>/', methods = ['GET', 'POST'])
+def delete(id):
+    my_data = Data.query.get(id)
+    db.session.delete(my_data)
+    db.session.commit()
+    flash("Project Deleted Successfully")
+    
+    return redirect(url_for('index'))
+    
+    
 
 
 if __name__ == "__main__":

@@ -51,7 +51,7 @@ Steps
 
 git clone https://github.com/michaeljumah/PROMASYS.git
 
-cd ROMASYS
+cd PROMASYS
 
 ## Create and activate a virtual environment
 

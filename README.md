@@ -6,7 +6,7 @@ Table of Contents
 
 Introduction
 
-Features
+Feature
 
 Installation
 
